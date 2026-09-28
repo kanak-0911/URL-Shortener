@@ -6,7 +6,9 @@ const Url = require("./urlModel");
 
 const app = express();
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 10000
+})
     .then(() => console.log("MongoDB connected"))
     .catch((error) => console.log("MongoDB connection error:", error));
 
