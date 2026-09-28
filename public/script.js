@@ -34,8 +34,7 @@ button.addEventListener("click", async function () {
             return;
         }
 
-        const shortUrl = "http://localhost:3000/" + data.shortId;
-
+        const shortUrl = window.location.origin + "/" + data.shortId;
         urlInput.value = "";
 
         result.innerHTML =
