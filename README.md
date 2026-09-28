@@ -1,6 +1,6 @@
 # URL Shortener
 
-A simple full-stack URL Shortener web application that converts long URLs into short and easy-to-share links.
+A simple full-stack web application that converts long URLs into short and easy-to-share links.
 
 ## Features
 
@@ -11,7 +11,7 @@ A simple full-stack URL Shortener web application that converts long URLs into s
 * Validate URLs before shortening
 * Copy the generated short URL
 * Clear the input and result
-* Handle invalid or unavailable short URLs with a 404 page
+* Handle invalid or unavailable short URLs with a custom 404 page
 * Press Enter to shorten a URL
 
 ## Technologies Used
@@ -23,15 +23,15 @@ A simple full-stack URL Shortener web application that converts long URLs into s
 * **Express.js** – Server and API handling
 * **MongoDB Atlas** – Database
 * **Mongoose** – MongoDB connection and data management
-* **dotenv** – Managing environment variables
+* **dotenv** – Environment variable management
 
 ## How It Works
 
 1. The user enters a long URL.
 2. The frontend sends the URL to the Express.js server.
-3. The server generates a unique short ID.
-4. The URL and short ID are stored in MongoDB.
-5. The generated short URL is shown to the user.
+3. The server generates a short ID.
+4. The original URL and short ID are stored in MongoDB.
+5. The generated short URL is displayed to the user.
 6. When the short URL is opened, the server finds the original URL in MongoDB.
 7. The click count is increased and the user is redirected to the original URL.
 
@@ -55,7 +55,7 @@ URL-Shortener/
 
 ## Database
 
-The application uses MongoDB Atlas to store shortened URLs.
+The application uses **MongoDB Atlas** to store shortened URLs.
 
 Each URL record contains:
 
@@ -91,7 +91,7 @@ Add your MongoDB connection string:
 MONGO_URI=your_mongodb_connection_string
 ```
 
-Do not upload the `.env` file to GitHub.
+**Do not upload the `.env` file to GitHub.**
 
 ### 5. Start the server
 
@@ -101,7 +101,7 @@ npm start
 
 ### 6. Open the application
 
-Open:
+Open the following URL in your browser:
 
 ```text
 http://localhost:3000
@@ -112,7 +112,7 @@ http://localhost:3000
 * User login and registration
 * Custom short URLs
 * URL expiration
-* Better analytics and click statistics
+* Detailed click analytics
 * Deployment for public access
 
 ## Author
